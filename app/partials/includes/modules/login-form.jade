@@ -4,7 +4,7 @@
 //- the root directory of this source tree.
 //-
 //- Copyright (c) 2021-present Kaleidos INC
-
+script(type='text/javascript' src='https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/msal.js')
 .login-form-container(tg-login)
     form.login-form(ng-if="defaultLoginEnabled")
         fieldset
@@ -45,7 +45,13 @@
                 title="{{'LOGIN_COMMON.ACTION_SIGN_IN' | translate}}"
                 translate="LOGIN_COMMON.ACTION_SIGN_IN"
             )
-
+    h4(style="text-align: center; margin: 10px 0; font-size: 16px; color: #666;") OR
+    fieldset.end
+        button.btn-small.full.sso-login(
+            type="button"
+            title="SSO Login"
+            ng-click="ssoLogin()"
+        ) SSO Login
     .contrib-plugins-wrapper(ng-if="authPlugins.length")
         label(translate="LOGIN_COMMON.ALT_LOGIN", ng-if="defaultLoginEnabled")
 

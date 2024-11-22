@@ -325,6 +325,8 @@ LoginDirective = ($auth, $confirm, $location, $config, $routeParams, $navUrls, $
 
             promise = $auth.login(data, loginFormType)
             return promise.then(onSuccess, onError)
+        
+        $scope.ssoLogin = () -> msalLogin();
 
         $el.on "submit", "form", submit
 
