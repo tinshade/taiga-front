@@ -79,6 +79,12 @@ webdriver-manager update
 
 To run a local Selenium Server, you will need to have the Java Development Kit (JDK) installed.
 
+## Adding SSO Credentials:
+
+To sucessfully run MSAL authentication, add the following keys in your conf.json file:
+"azureClientId": "<YOUR AZURE CLIENT ID>",
+"azureAuthority": "<YOUR AZURE AUTHORITY URL>"
+
 ## Tests
 
 #### Unit tests
