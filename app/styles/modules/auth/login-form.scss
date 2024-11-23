@@ -29,4 +29,18 @@
             transition: color .3s linear;
         }
     }
+
+
+    .btn-microsoft-login {
+        @include font-size(small);
+        align-content: center;
+        align-items: center;
+        background-color: $color-gray100;
+        border: 1px solid $color-gray800;
+        border-radius: 4px;
+        color: $color-gray800;
+        display: flex;
+        gap: 8px;
+        text-align: center;
+    }
 }

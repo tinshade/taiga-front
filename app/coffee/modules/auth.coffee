@@ -382,7 +382,9 @@ RegisterDirective = ($auth, $confirm, $location, $navUrls, $config, $routeParams
 
             promise = $auth.register($scope.data)
             promise.then(onSuccessSubmit, onErrorSubmit)
-
+        
+        $scope.ssoLogin = () -> msalLogin();
+        
         $el.on "submit", "form", submit
 
         $scope.$on "$destroy", ->

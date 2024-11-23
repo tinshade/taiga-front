@@ -8078,8 +8078,8 @@ function loggerCallback(logLevel, message, containsPii) {
 // https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-logging
 var MSALLogger = {
     auth: {
-        clientId: "e2f25091-67e8-4437-854a-fac871045ff9",
-        authority: "https://login.microsoftonline.com/ganitinc.com",
+        clientId: window.taigaConfig?.azureClientId,
+        authority: window.taigaConfig?.azureAuthority,
         redirectUri: window.location.origin,
     },
     cache: {
@@ -8110,7 +8110,7 @@ async function getUserData(token, username, email, fullName) {
             full_name: fullName,
             accepted_terms: true,
         });
-        const response = await fetch("http://localhost:8000/api/v1/auth/sso", {
+        const response = await fetch(`${window.taigaConfig.api}auth/sso`, {
             method: "POST",
             headers: headers,
             body: payload,

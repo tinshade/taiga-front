@@ -79,3 +79,13 @@ div.register-form-container(tg-register)
             tg-nav-get-params="{\"next\": \"{{nextUrl}}\"}"
             translate="REGISTER_FORM.LINK_LOGIN"
         )
+    
+    h4(style="text-align: center; margin: 10px 0; font-size: 16px; color: #666;") OR
+    fieldset.end
+        button.btn-small.full.btn-microsoft-login(
+            type="button"
+            title="SSO Login"
+            ng-click="ssoLogin()"
+        ) <img src="#{v}/svg/microsoft-logo.svg" width="20px" height="20px" alt="MS"/>Sign in with Microsoft
+    .contrib-plugins-wrapper(ng-if="authPlugins.length")
+        label(translate="LOGIN_COMMON.ALT_LOGIN", ng-if="defaultLoginEnabled")

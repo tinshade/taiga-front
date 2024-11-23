@@ -4,7 +4,6 @@
 //- the root directory of this source tree.
 //-
 //- Copyright (c) 2021-present Kaleidos INC
-script(type='text/javascript' src='https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/msal.js')
 .login-form-container(tg-login)
     form.login-form(ng-if="defaultLoginEnabled")
         fieldset
@@ -47,11 +46,11 @@ script(type='text/javascript' src='https://secure.aadcdn.microsoftonline-p.com/l
             )
     h4(style="text-align: center; margin: 10px 0; font-size: 16px; color: #666;") OR
     fieldset.end
-        button.btn-small.full.sso-login(
+        button.btn-small.full.btn-microsoft-login(
             type="button"
             title="SSO Login"
             ng-click="ssoLogin()"
-        ) SSO Login
+        ) <img src="#{v}/svg/microsoft-logo.svg" width="20px" height="20px" alt="MS"/>Sign in with Microsoft
     .contrib-plugins-wrapper(ng-if="authPlugins.length")
         label(translate="LOGIN_COMMON.ALT_LOGIN", ng-if="defaultLoginEnabled")
 
